@@ -69,6 +69,7 @@ const Calculator = () => {
               endAdornment: <InputAdornment position="end">m/s</InputAdornment>,
               readOnly: true,
             }}
+            InputLabelProps={{ shrink: velocityFraction !== undefined }}
           />
         </Stack>
       </Container>
@@ -88,7 +89,13 @@ const Introduction = () => (
 const App = () => (
   <>
     <CssBaseline />
-    <Grid container sx={{ height: "100%" }} spacing={1}>
+    <Grid
+      container
+      sx={{ height: "100%", mx: "auto" }}
+      spacing={1}
+      maxWidth="xl"
+      justifyContent="center"
+    >
       <Grid item xs={8}>
         <Introduction />
       </Grid>
